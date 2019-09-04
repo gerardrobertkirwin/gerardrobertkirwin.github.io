@@ -2,7 +2,7 @@
 layout: post
 title: "Hello World!"
 author: "Gerard Kirwin"
-categories: facts
+categories: blog
 tags: [sample]
 image: nature-1.jpg
 ---
