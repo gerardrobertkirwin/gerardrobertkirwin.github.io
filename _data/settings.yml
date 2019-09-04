@@ -7,7 +7,7 @@ disqus:
 google-ID: ''
 
 menu:
-- {name: 'Interesting Facts', folder: 'pages', file: 'facts.html'}
+- {name: 'Blog', folder: 'pages', file: 'blog.html'}
 - {name: 'Learning Resources', folder: 'pages', file: 'resources.html'}
 - {name: 'Sample Posts', folder: 'pages', file: 'sample-posts.html'}
 - {name: 'Photography', folder: 'pages', file: 'photography.html'}
