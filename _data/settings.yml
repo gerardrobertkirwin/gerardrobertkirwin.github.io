@@ -17,7 +17,7 @@ menu:
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:
 - {icon: 'twitter', link: 'https://twitter.com/grkirwin'}
-- {icon: 'linkedin', link: 'https://www.linkedin.com/gerard-kirwin'}
+- {icon: 'linkedin', link: 'https://www.linkedin.com/in/gerard-kirwin'}
 - {icon: 'instagram', link: 'https://instagram.com/gerardrobertkirwin'}
 - {icon: 'envelope', link: 'mailto:gerardrobertkirwin@gmail.com'}
 - {icon: 'rss-square', link: 'feed.xml'}
