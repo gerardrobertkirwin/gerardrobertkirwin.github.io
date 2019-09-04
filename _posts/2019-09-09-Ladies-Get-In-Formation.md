@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Ladies Get In Formation"
+title: "Ladies, Get In Formation!"
 author: "Gerard Kirwin"
 categories: blog
 tags: [sample]
