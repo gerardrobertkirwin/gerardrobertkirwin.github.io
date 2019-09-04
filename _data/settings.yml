@@ -8,8 +8,6 @@ google-ID: ''
 
 menu:
 - {name: 'Blog', folder: 'pages', file: 'blog.html'}
-- {name: 'Learning Resources', folder: 'pages', file: 'resources.html'}
-- {name: 'Sample Posts', folder: 'pages', file: 'sample-posts.html'}
 - {name: 'Photography', folder: 'pages', file: 'photography.html'}
 - {name: 'About', folder: 'pages', file: 'about.html'}
 - {name: 'Contact', folder: 'pages', file: 'contact.html'}
