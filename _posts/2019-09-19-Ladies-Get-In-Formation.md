@@ -20,8 +20,10 @@ Teaching myself R has been surprisingly easy for me. I say this not to brag or b
 
 Data
 ----------
-I stumbled upon the Women In Parliament data set on [Twitter](https://twitter.com/ilustat/status/1154401034183352321) and was interested in doing a project that, as the tweet says, isn't the "car mpg" or "iris" projects that are the textbook projects.
+I stumbled upon the Women In Parliament data set on [Twitter](https://twitter.com/ilustat/status/1154401034183352321) and was interested in doing a project that, as the tweet says, isn't the "car mpg" or "iris" projects that are the textbook projects. I was also drawn to the project for its real world implications and possiblities for social and political impacts. Not something you can get from the sepal length of an iris.
 
+Analysis
+----------
 Included with the tweet was some instructions to follow through and clean the data. I went through the directions, which cleaned the data and produced graphs. I decided to redo the project, using the United States instead of Portugal.
 
 I have also added two more items to clean up the dataset. First, since I am focusing on the United States, it would be useful to compare it to other North American countries. Unfortunately, the data set puts North and South American countries together as "The Americas".
@@ -37,14 +39,34 @@ I put together the following code to create a "North America" and "South America
     ##  3rd Qu.:19.0   3rd Qu.: 56.00  
     ##  Max.   :25.0   Max.   :120.00
 
-The second issue I had with the dataset was the odd values in 1990. Every plot from the exercise made 1990 seem like an outlier, it skewed each graph in a way that didn't seem correct. Looking closely as well, you can see that the 1990 data is from lfkjdsflsjfls while the 1997 and later data is from the World Bank. The inconsistent data should be removed.
+The second issue I had with the dataset was the odd values in 1990. Every plot from the exercise made 1990 seem like an outlier, it skewed each graph in a way that didn't seem correct. From the example in the documentation with European countries, the percent of women in the Romanian parliament took a sharp drop after 1990. Knowing that this was right after the fall of Communism, I wondered if the spirit of revolution had produced progress on gender equity, only for it to receed in the years following.
 
-Including Plots
+A little investigation finds that the data was incorrect. The dataset shows Romania with a 34.4% of women in their 1990 Parliament while my research found that it was only 3.62% (14 out of 387) in the lower chamber and 0.84% (1 out of 119) in the upper chamber. While Romania is just one example, it is clear there is something wrong with the data.
+
+From the documentation, the 1990 data is from the World Bank directly while the 1997 and later data is from the Inter-Parliamentary
+Union (IPU). In addition, the World Bank data included upper chambers while the IPU data only includes lower chambers. I'm not sure that either of these are the cause of the enormous error we saw in the Romanian example but I know the inconsistent and unreliable data should be removed. 
+
+     summary(cars)
+
+    ##      speed           dist       
+    ##  Min.   : 4.0   Min.   :  2.00  
+
+
+Visualizations
 ---------------
 
-You can also embed plots, for example:
+With the 1990 data removed and The Americas seperated into North and South, I am ready to do some visualizing and analysis.
 
-![](Untitled_files/figure-markdown_strict/pressure-1.png)
+basic line graph
+the other one
 
-Note that the `echo = FALSE` parameter was added to the code chunk to
-prevent printing of the R code that generated the plot.
+ridgelines
+I tried a number of interesting visualizations to try and visualize this data, including a violin graph. The best representation I could find was a ridgeline plot.
+
+Conclusions
+---------------
+This data goes through 2018. In 2019, the percentage of women in the United States lower chamber (the House of Representatives) has increased to 24% (based on my research) from 19.8% in 2018. No surprise here, the election of several new women in the House was a major story in the 2018 midterm election. With politics being such a volatile field, it's hard to predict where the number will go from here.
+
+other countries etc
+
+You can check out the project on github here.
