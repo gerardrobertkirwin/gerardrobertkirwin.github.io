@@ -3,7 +3,7 @@ layout: misc
 title: About
 ---
 
-![me](/assets/img/3813D2FB-1845-481F-BD6E-598B83BCADBB.jpeg)
+![me](/assets/img/gerard1.png)
 Some people are excellent at one thing, like professional athletes. Some people are average, people who can keep up with a pick-up basketball game in the park. And there are players who are really good shooters, there are players who are really good defenders. And there are players who do well in multiple parts of their game but aren't excellent in just one area\*. I like to think of myself as one of those kind of people. <br><br>
 As a kid, I was really bright and very interested in becoming a TV meteorologist. I followed this dream into college when I realized I was very good at calculus, physics and thermodynamics and I was very good at developing and communicating forecasts but not *excellent* at it. This, and graduating in the middle of the recession, led me down another path, to teaching.<br><br>
 I ended up teaching, including my time as a substitute and as a student teacher, for 7 years. I was very good at explaining chemistry and physics concepts to unmotivated art school kids and was very good at handling the ups and downs of dealing with teenagers 193 days a year, but I was not *excellent* at it. This, and barely surviving wave after wave of budget cuts, led me down yet another path. This is what brought me to data analysis. <br><br>
