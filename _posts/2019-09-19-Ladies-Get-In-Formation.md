@@ -30,12 +30,12 @@ I have also added two more items to clean up the dataset. First, since I am focu
 I put together the following code to create a "North America" and "South America" region for better analysis.
 
     WPN <- WP2 %>% 
-    mutate(Continent=replace(Continent, 
+        mutate(Continent=replace(Continent, 
                          Country %in% c("Antigua and Barbuda", "Bahamas, The", "Barbados", "Belize", "Canada", "Caribbean small states", "Costa Rica", "Cuba", "Dominica", "Dominican Republic", "El Salvador", "Grenada", "Guatemala", "Honduras",   "Haiti", "Jamaica", "Mexico", "Nicaragua", "Panama", "Puerto Rico", "St. Kitts and Nevis", "St. Lucia", "St. Vincent and the Grenadines", "Trinidad and Tobago", "United States"),
                          "North America")) 
 
     WPN <- WPN %>%   
-    mutate(Continent=replace(Continent, 
+        mutate(Continent=replace(Continent, 
                          Country %in% c("Argentina", "Bolivia", "Brazil", "Chile", "Colombia", "Ecuador", "Guyana",  "Paraguay", "Peru", "Suriname", "Uruguay", "Venezuela, RB"), 
                          "South America"))
 
@@ -47,7 +47,7 @@ From the documentation, the 1990 data is from the World Bank directly while the 
 Union (IPU). In addition, the World Bank data included upper chambers while the IPU data only includes lower chambers. I'm not sure that either of these are the cause of the enormous error we saw in the Romanian example but I know the inconsistent and unreliable data should be removed. 
 
      WPN <- WPN %>% 
-    filter(Year != 1990)
+        filter(Year != 1990)
 
 
 Visualizations
