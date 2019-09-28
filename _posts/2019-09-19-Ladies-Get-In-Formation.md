@@ -46,10 +46,8 @@ A little investigation finds that the data was incorrect. The dataset shows Roma
 From the documentation, the 1990 data is from the World Bank directly while the 1997 and later data is from the Inter-Parliamentary
 Union (IPU). In addition, the World Bank data included upper chambers while the IPU data only includes lower chambers. I'm not sure that either of these are the cause of the enormous error we saw in the Romanian example but I know the inconsistent and unreliable data should be removed. 
 
-     summary(cars)
-
-    ##      speed           dist       
-    ##  Min.   : 4.0   Min.   :  2.00  
+     WPN <- WPN %>% 
+    filter(Year != 1990)
 
 
 Visualizations
