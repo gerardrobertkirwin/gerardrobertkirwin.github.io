@@ -29,15 +29,15 @@ Included with the tweet was some instructions to follow through and clean the da
 I have also added two more items to clean up the dataset. First, since I am focusing on the United States, it would be useful to compare it to other North American countries. Unfortunately, the data set puts North and South American countries together as "The Americas".
 I put together the following code to create a "North America" and "South America" region for better analysis.
 
-    summary(cars)
+    WPN <- WP2 %>% 
+    mutate(Continent=replace(Continent, 
+                         Country %in% c("Antigua and Barbuda", "Bahamas, The", "Barbados", "Belize", "Canada", "Caribbean       small states", "Costa Rica", "Cuba", "Dominica", "Dominican Republic", "El Salvador", "Grenada", "Guatemala", "Honduras",   "Haiti", "Jamaica", "Mexico", "Nicaragua", "Panama", "Puerto Rico", "St. Kitts and Nevis", "St. Lucia", "St. Vincent and the Grenadines", "Trinidad and Tobago", "United States"),
+                         "North America")) 
 
-    ##      speed           dist       
-    ##  Min.   : 4.0   Min.   :  2.00  
-    ##  1st Qu.:12.0   1st Qu.: 26.00  
-    ##  Median :15.0   Median : 36.00  
-    ##  Mean   :15.4   Mean   : 42.98  
-    ##  3rd Qu.:19.0   3rd Qu.: 56.00  
-    ##  Max.   :25.0   Max.   :120.00
+    WPN <- WPN %>%   
+    mutate(Continent=replace(Continent, 
+                         Country %in% c("Argentina", "Bolivia", "Brazil", "Chile", "Colombia", "Ecuador", "Guyana",     "Paraguay", "Peru", "Suriname", "Uruguay", "Venezuela, RB"), 
+                         "South America"))
 
 The second issue I had with the dataset was the odd values in 1990. Every plot from the exercise made 1990 seem like an outlier, it skewed each graph in a way that didn't seem correct. From the example in the documentation with European countries, the percent of women in the Romanian parliament took a sharp drop after 1990. Knowing that this was right after the fall of Communism, I wondered if the spirit of revolution had produced progress on gender equity, only for it to receed in the years following.
 
