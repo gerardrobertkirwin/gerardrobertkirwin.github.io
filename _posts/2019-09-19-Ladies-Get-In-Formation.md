@@ -58,7 +58,7 @@ With the 1990 data removed and The Americas seperated into North and South, I am
 Here's a basic line graph with our data:
 
 (/assets/img/WiP_Plots/North_America_Final_Line%20Plot.png)
-
+<img src="https://raw.githubusercontent.com/gerardrobertkirwin/gerardrobertkirwin.github.io/master/assets/img/WiP_Plots/North_America_Final_Line%20Plot.png" width="600">
 I used a portion of the code from the documentation but moved the legend to the bottom, added the title, changed to the minimal theme and chose a rainbow color scale. All of these things were done to make the graph easier to read. With this easier-to-read graph, you can see that the United States (in pink) lags behind Cuba, Mexico, Nicaragua, El Salvador, Canada, Dominican Republic and Honduras in women representation in national legislatures in 2018.
 
 
