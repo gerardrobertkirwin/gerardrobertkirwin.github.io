@@ -53,13 +53,16 @@ Union (IPU). In addition, the World Bank data included upper chambers while the 
 Visualizations
 ---------------
 
-With the 1990 data removed and The Americas seperated into North and South, I am ready to do some visualizing and analysis.
+With the 1990 data removed and The Americas seperated into North and South, I am ready to do some visualizing and analysis. The North American data set has 24 Countries in it and when graphed, it is messy and not nice to read, click if you dare. From this point forward, I will use the ten largest countries in North America.
 
-basic line graph
-the other one
+Here's a basic line graph with our data:
 
-ridgelines
-I tried a number of interesting visualizations to try and visualize this data, including a violin graph. The best representation I could find was a ridgeline plot.
+(image location)
+
+I used a portion of the code from the documentation but moved the legend to the bottom, added the title, changed to the minimal theme and chose a rainbow color scale. All of these things were done to make the graph easier to read. With this easier-to-read graph, you can see that the United States (in pink) lags behind Cuba, Mexico, Nicaragua, El Salvador, Canada, Dominican Republic and Honduras in women representation in national legislatures in 2018.
+
+
+I tried a number of other interesting visualizations to try and visualize this data, including a violin graph. The best representation I could find was a ridgeline plot. 
 
 Conclusions
 ---------------
