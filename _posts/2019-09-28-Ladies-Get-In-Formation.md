@@ -16,18 +16,20 @@ is licensed under
 BY-NC-ND
 2.0</a></p>
 
-Teaching myself R has been fairly easy for me. I say this not to brag or boast. I've been working on [Data Camp's Data Analyst Track](https://www.datacamp.com/profile/gerardrobertkirwin) for a few months now and I've worked my way through their guided exercises with relative ease. So the next step in my data science learning journey is to work on some projects on my own. As much as I have learned from the exercises, nothing is better than doing it yourself. The blogs on this site will follow these projects.
+Teaching myself R has been fairly easy. I’ve been working on [Data Camp's Data Analyst Track](https://www.datacamp.com/profile/gerardrobertkirwin) for a few months now, and I’ve made my way through their guided exercises. The next step in my data science learning journey is to work on some projects on my own. As much as I have learned from the exercises, nothing is better than doing it yourself. My blog will follow these projects.
+
 
 Data
 ----------
-I stumbled upon the Women In Parliament data set on [Twitter](https://twitter.com/ilustat/status/1154401034183352321) and was interested in doing a project that, as the tweet says, isn't the "car mpg" or "iris" projects that are the textbook projects. I was also drawn to the project for its real world implications and possiblities for social and political impacts. Not something you can get from the sepal length of an iris.
+I stumbled upon the Women In Parliament data set on [Twitter](https://twitter.com/ilustat/status/1154401034183352321) and was interested in doing a project that isn’t a boilerplate “car mpg” or “iris” seen in many R courses. I was also drawn to the project for its real world implications and possibilities for social and political impacts. Not something you can get from the sepal length of an iris.
+
 
 Analysis
 ----------
-Included with the tweet was some instructions to follow through and clean the data. I went through the directions, which cleaned the data and produced graphs. I decided to redo the project, using the United States instead of Portugal.
+I went through the instructions included with the Tweet, cleaned the data, and produced graphs. I decided to redo the project using the United States instead of Portugal.
 
-I have also added two more items to clean up the dataset. First, since I am focusing on the United States, it would be useful to compare it to other North American countries. Unfortunately, the data set puts North and South American countries together as "The Americas".
-I put together the following code to create a "North America" and "South America" region for better analysis. It's a pretty simple mutate call but I listed it here so you can see how the countries were divided.
+I have also added two more items to clean up the dataset. First, since I am focusing on the United States, it would be useful to compare it to other North American countries. Unfortunately, the data set puts North and South American countries together as "The Americas."
+I put together the following code to create a "North America" and "South America" region for better analysis. It's a pretty simple mutate call, but I listed it here so you can see how the countries were divided.
 
     WPN <- WP2 %>% 
         mutate(Continent=replace(Continent, 
