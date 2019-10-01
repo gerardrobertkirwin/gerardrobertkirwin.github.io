@@ -57,10 +57,10 @@ Here's a basic line graph with our data:
 
 <img src="https://raw.githubusercontent.com/gerardrobertkirwin/gerardrobertkirwin.github.io/master/assets/img/WiP_Plots/North_America_Final_Line%20Plot.png" width="600">
 
-I used a portion of the code from the documentation but moved the legend to the bottom, added the title, changed to the minimal theme and chose a rainbow color scale. All of these things were done to make the graph easier to read. With this easier-to-read graph, you can see that the United States (in pink) lags behind Cuba, Mexico, Nicaragua, El Salvador, Canada, Dominican Republic and Honduras in women representation in national legislatures in 2018. This graph shows us patterns (such as an increase in most countries after 2010) and individual changes (often due to political changes within each country).
+I used a portion of the code from the documentation, moved the legend to the bottom, added the title, changed to the minimal theme, and chose a rainbow color scale. All of these changes were meant to make the graph easier to read. With this simplified graph, you can see that the United States (in pink) lags behind Cuba, Mexico, Nicaragua, El Salvador, Canada, Dominican Republic, and Honduras in women's representation in 2018’s national legislatures. This graph shows us patterns (such as an increase in most countries after 2010) and individual changes (often due to political changes within each country).
 
+I tried a number of other interesting approaches to try and visualize this data another way, including a violin graph. The best representation I could find was a ridgeline plot.
 
-I tried a number of other interesting visualizations to try and visualize this data another way, including a violin graph. The best representation I could find was a ridgeline plot. 
     
     library(ggridges)
     library(viridis)
@@ -79,9 +79,10 @@ I tried a number of other interesting visualizations to try and visualize this d
 
 <img src="https://raw.githubusercontent.com/gerardrobertkirwin/gerardrobertkirwin.github.io/master/assets/img/WiP_Plots/North_America_Final_Ridge_Plot.png" width="600">
 
-I filtered and arranged the countries using dplyr by the highest percent in 2018 and copied the output. I know it would have been cleaner to have this output transferred in the plot using reference code but I was unable to get it to work on my console.
+I filtered and arranged the countries using dplyr by the highest percent in 2018 and copied the output. I know it would have been cleaner to have this output transferred in the plot using reference code, but I was unable to get it working on my console.
 
-The ridge shows the deviation in the time period of the data and the color is related to the percent. This means the shape of each line shows us how much change there has been in the last 20 years. Bell-like curves have changed little where curves that look like rolling hills have changed quite a bit.  The graph shows us in most countries there hasn't been much change, including in the United States. The graph has the added side effect of showing each country clearer than the line graph did. 
+The ridge shows the deviation in the time period of the data and the color is related to the percent. This means the shape of each line shows us how much change there has been in the last 20 years. Bell-like curves have changed little where curves that look like rolling hills have changed quite a bit. The graph shows little change in most countries, including in the United States. The graph has the added side effect of showing each country clearer than the line graph did.
+
 
 Conclusions
 ---------------
