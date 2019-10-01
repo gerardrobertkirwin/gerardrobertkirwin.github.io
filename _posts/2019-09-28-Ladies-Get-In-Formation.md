@@ -41,18 +41,17 @@ I put together the following code to create a "North America" and "South America
                          Country %in% c("Argentina", "Bolivia", "Brazil", "Chile", "Colombia", "Ecuador", "Guyana",  "Paraguay", "Peru", "Suriname", "Uruguay", "Venezuela, RB"), 
                          "South America"))
 
-The second issue I had with the dataset was the odd values in 1990. Every plot from the exercise made 1990 seem like an outlier, it skewed each graph in a way that didn't seem correct. From the example in the documentation with European countries, the percent of women in the Romanian parliament took a sharp drop after 1990. Knowing that this was right after the fall of Communism, I wondered if the spirit of revolution had produced progress on gender equity, only for it to receed in the years following.
+The second issue I had with the dataset was the odd values in 1990. Every plot from the exercise made 1990 seem like an outlier—it skewed each graph in a way that didn’t seem correct. From the example in the documentation with European countries, the percent of women in the Romanian parliament took a sharp drop after 1990. Knowing this was right after the fall of Communism, I wondered if the spirit of revolution had produced progress on gender equity, only for it to recede in the years following.
 
-A little investigation finds that the data was incorrect. The dataset shows Romania with a 34.4% of women in their 1990 Parliament while my research found that it was only 3.62% (14 out of 387) in the lower chamber and 0.84% (1 out of 119) in the upper chamber. While Romania is just one example, it is clear there is something wrong with the data.
+A little investigation finds the data to be incorrect. The dataset shows Romania with 34.4% women in their 1990 Parliament while my research found that it was only 3.62% (14 out of 387) in the lower chamber and 0.84% (1 out of 119) in the upper chamber. While Romania is just one example, there is clearly something wrong with the data.
 
-From the documentation, the 1990 data is from the World Bank directly while the 1997 and later data is from the Inter-Parliamentary
-Union (IPU). In addition, the World Bank data included upper chambers while the IPU data only includes lower chambers. I'm not sure that either of these are the cause of the enormous error we saw in the Romanian example but I know the inconsistent and unreliable data should be removed. 
+From the documentation, the 1990 data is from the World Bank directly while the 1997 and later data is from the Inter-Parliamentary Union (IPU). In addition, the World Bank data included upper chambers while the IPU data only includes lower chambers. I’m not sure that either of these are the cause of the enormous error we saw in the Romanian example, but I know the inconsistent and unreliable data needs to be removed.
 
 
 Visualizations
 ---------------
 
-With the 1990 data removed and The Americas seperated into North and South, I am ready to do some visualizing and analysis. The North American data set has 24 countries in it and when graphed, it is messy and not nice to read, [click if you dare](https://raw.githubusercontent.com/gerardrobertkirwin/gerardrobertkirwin.github.io/master/assets/img/WiP_Plots/North_America_Line_Plot.png). From this point forward, I will use the ten largest countries in North America.
+With the 1990 data removed and The Americas separated into North and South, I am ready to do some visualizing and analysis. The North American dataset includes 24 countries and produces a messy graph; [click if you dare](https://raw.githubusercontent.com/gerardrobertkirwin/gerardrobertkirwin.github.io/master/assets/img/WiP_Plots/North_America_Line_Plot.png). From this point forward, I will use the ten largest countries in North America.
 
 Here's a basic line graph with our data:
 
