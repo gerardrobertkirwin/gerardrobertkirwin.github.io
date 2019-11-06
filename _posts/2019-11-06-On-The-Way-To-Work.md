@@ -81,8 +81,11 @@ Then I set to work with plotting my map in leaflet, which was surprisingly easy.
 
 My first idea was to have two seperate maps, one with biking data and one with walking data. Then, I saw that the data, being presnted spatially, would probably make more sense together. Since I'm looking on a map, I would be more invested in how neighboring cities compare rather than the different modes.
 
-Next, I played with some of the leaflet options to 
+Next, I played with some of the leaflet options to create the map. I chose to keep the cluster options on the map because I thought it was the most elegant way to zoom into sites. For example, if I wanted to see Portland Oregon, I would click on the circle in the northwest. 
 
-<iframe src="raw.githubusercontent.com/gerardrobertkirwin/TT-Bike-Cycle-Work/master/TT%20Bike%20Cycle%20Work/commute_map.html" style="border: none; width: 800px; height: 800px"></iframe>
+The biggest struggle I had was with the markers themselves. My initial thought was to have a marker with respective bike and walk icons. For some reason, I was not able to get the icons on the walking markers. I tried a number of different methods but nothing seemed to work. For the sake of getting this project out in a timely fashion, I changed the markers to be color based and added a legend.
 
-You can check out my GitHub repository [here]() for the full code.
+Here is the finished product:
+<iframe src="commute_map.html" style="border: none; width: 800px; height: 800px"></iframe>
+
+You can check out my GitHub repository [here](https://github.com/gerardrobertkirwin/TT-Bike-Cycle-Work) for the full code.
