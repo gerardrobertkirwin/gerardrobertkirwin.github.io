@@ -95,4 +95,6 @@ You can check out my GitHub repository [here](https://github.com/gerardrobertkir
 
 This project is different than some of my others because I did not do much data analysis. I'm sure if you search #TidyTuesday on Twitter this week, you'll find lots of excellent examples of people who have done some analysis. A quick look shows me that the largest percentage of people who cycle to work live in the Northwest, for example.
 
-My project is more about presenting the data in an accessible format. I keep thinking about how I can expand this project. I think of trying to find a resolution of 
+My project is more about presenting the data in an accessible format. I keep thinking about how I can expand this project. I think of trying to resolve my issue with using icons and then eliminating the legend. What if I added other types of commutes such as driving and public transportation? What if the color was based on percentage of commuters using each mode? I have lots of potential additions I can think about adding, which is pretty amazing from a dataset with only 9 columns. 
+
+I also look forward to contributing more to #TidyTuesday in the future. If you're reading this and have any comments or questions, feel free to shoot me an [email](mailto:gerardrobertkirwin@gmail.com) or find me on [Twitter](https://twitter.com/grkirwin).
