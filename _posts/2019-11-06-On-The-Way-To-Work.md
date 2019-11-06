@@ -30,7 +30,7 @@ This week’s [#TidyTuesday](https://twitter.com/thomas_mock/status/119136845615
 It is a relatively simple dataset. 9 columns and just under 3500 rows representing small, medium and large American cities with both “bike” and “walk”. 
 The data came from the American Community Survey run by the United States Census. The data from the Census broke it down by “city size”. I couldn’t find another database where those categories were broken down, so I decided to use the Tidy Tuesday dataset from [GitHub](https://github.com/rfordatascience/tidytuesday/tree/master/data/2019/2019-11-05) instead.
 
-*Analysis* 
+*Data Cleaning and Formatting* 
 ----------
 My first task (outside of downloading the data and uploading the needed packages) was to clean up the data. The “city” column was messy. 
 It included the city name and the designation of the city, for example, a township or borough. 
@@ -81,11 +81,18 @@ Then I set to work with plotting my map in leaflet, which was surprisingly easy.
 
 My first idea was to have two seperate maps, one with biking data and one with walking data. Then, I saw that the data, being presnted spatially, would probably make more sense together. Since I'm looking on a map, I would be more invested in how neighboring cities compare rather than the different modes.
 
-Next, I played with some of the leaflet options to create the map. I chose to keep the cluster options on the map because I thought it was the most elegant way to zoom into sites. For example, if I wanted to see Portland Oregon, I would click on the circle in the northwest. 
+Next, I played with some of the leaflet options to create the map. I chose to keep the cluster options on the map because I thought it was the most elegant way to zoom into sites. For example, if I wanted to see Portland Oregon, I would click on the circle in the northwest. I also made the popup display the city name and percent of commuters who use each mode.
 
 The biggest struggle I had was with the markers themselves. My initial thought was to have a marker with respective bike and walk icons. For some reason, I was not able to get the icons on the walking markers. I tried a number of different methods but nothing seemed to work. For the sake of getting this project out in a timely fashion, I changed the markers to be color based and added a legend.
 
 Here is the finished product:
-<iframe src="https://raw.githack.com/gerardrobertkirwin/TT-Bike-Cycle-Work/master/commute_map.html" style="border: none; width: 800px; height: 800px"></iframe>
+<iframe src="https://raw.githack.com/gerardrobertkirwin/TT-Bike-Cycle-Work/master/commute_map.html" style="border: none; width: 600px; height: 800px"></iframe>
 
 You can check out my GitHub repository [here](https://github.com/gerardrobertkirwin/TT-Bike-Cycle-Work) for the full code.
+
+*Conclusions and Next Steps*
+-------------
+
+This project is different than some of my others because I did not do much data analysis. I'm sure if you search #TidyTuesday on Twitter this week, you'll find lots of excellent examples of people who have done some analysis. A quick look shows me that the largest percentage of people who cycle to work live in the Northwest, for example.
+
+My project is more about presenting the data in an accessible format. I keep thinking about how I can expand this project. I think of trying to find a resolution of 
