@@ -35,16 +35,46 @@ My first task (outside of downloading the data and uploading the needed packages
 It included the city name and the designation of the city, for example, a township or borough. 
 This information is not necessary for my purposes so I got rid of it.
 
-Code xxxx
+    clean_commute <- commute %>% mutate(city=str_replace_all(city, " city", "")) %>%  
+    mutate(city=str_replace_all(city, " town", "")) %>%   
+    mutate(city=str_replace_all(city, " village", "")) %>%  
+    mutate(city=str_replace_all(city, " municipality", "")) %>%   
+    mutate(city=str_replace_all(city, " borough", ""))  %>% 
+    mutate(city=str_replace_all(city, " \\(balance\\)", "")) %>% 
+    mutate(city=str_replace_all(city, " urban county", "")) 
 
 Then I created a new column of the city and state combined to allow for the searching of the geographic coordinates. My original plan was to use the ggmap package. However, because the package uses the Google API, it required registering. I don’t know how often I plan to use it so I decided to look around for alternatives. 
 
 It was through this I was able to learn about another R mapping package, leaflet. This package uses the OpenStreetMap you are likely familiar from craigslist. This meant I needed to do another step, as ggmap has a built-in coordinate fetcher and leaflet does not.
 
+I found an [answer on StackOverflow](https://stackoverflow.com/questions/22887833/r-how-to-geocode-a-simple-address-using-data-science-toolbox) and I rewrote the code for my purposes which gave me geographic coordinates for all the cities in my dataset. From here, I did a little more tidying with the place names and had to change the coordinates to the correct type.
 
-I found an answer on StackOverflow and I rewrote the code for my purposes which gave me geographic coordinates for all the cities in my dataset. From here, I did a little more tidying with the place names and had to change the coordinates to the correct type.
+    clean_commute <- clean_commute %>% 
+    mutate(address=str_c(city, state_abb, sep =", "))
 
-Codexxxx
+
+    geo.dsk <- function(addr){ 
+      require(httr)
+      require(rjson)
+      url      <- "http://www.datasciencetoolkit.org/maps/api/geocode/json"
+      response <- GET(url,query=list(sensor="FALSE",address=addr))
+      json <- fromJSON(content(response,type="text"))
+      loc  <- json['results'][[1]][[1]]$geometry$location
+      return(c(address=addr,long=loc$lng, lat= loc$lat))
+    }
+    map_commute <- do.call(rbind,lapply(as.character(clean_commute$address),geo.dsk))
+    map_commute <- tbl_df(map_commute)
+    map_commute
+    tbl_df(clean_commute)
+    new_map_commute <- map_commute %>% 
+    inner_join(clean_commute) %>% 
+    distinct()
+
+    new_map_commute <- new_map_commute %>%  mutate(long = as.numeric(long)) %>% 
+      mutate(lat=as.numeric(lat)) %>% 
+      filter(!is.na(address))
 
 *Visualization*
 ----------
+Then I set to work with plotting my map in leaflet, which was surprisingly easy. The options were pretty straightforward and when I needed some help, I consulted the help function and various sources via Google. I also want to [shoutout out Earth Lab](https://www.earthdatascience.org/courses/earth-analytics/get-data-using-apis/leaflet-r/), whose work I found extremely helpful while working on this project.
+
