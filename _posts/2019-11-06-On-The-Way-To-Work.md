@@ -83,6 +83,6 @@ My first idea was to have two seperate maps, one with biking data and one with w
 
 Next, I played with some of the leaflet options to 
 
-<iframe src="https://raw.githubusercontent.com/gerardrobertkirwin/TT-Bike-Cycle-Work/master/TT%20Bike%20Cycle%20Work/commute_map.html" style="border: none; width: 800px; height: 800px"></iframe>
+<iframe src="pages/commute_map.html" style="border: none; width: 800px; height: 800px"></iframe>
 
 You can check out my GitHub repository [here]() for the full code.
