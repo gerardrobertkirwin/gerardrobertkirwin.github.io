@@ -1,27 +1,4 @@
 ---
-header-include: |-
-  <script src="commute_map_files/htmlwidgets-1.5.1/htmlwidgets.js"></script>
-  <script src="commute_map_files/jquery-1.12.4/jquery.min.js"></script>
-  <link href="commute_map_files/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
-  <script src="commute_map_files/leaflet-1.3.1/leaflet.js"></script>
-  <link href="commute_map_files/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
-  <script src="commute_map_files/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
-  <script src="commute_map_files/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
-  <link href="commute_map_files/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
-  <script src="commute_map_files/leaflet-binding-2.0.2/leaflet.js"></script>
-  <script src="commute_map_files/leaflet-providers-1.1.17/leaflet-providers.js"></script>
-  <script src="commute_map_files/leaflet-providers-plugin-2.0.2/leaflet-providers-plugin.js"></script>
-  <link href="commute_map_files/leaflet-awesomemarkers-2.0.3/leaflet.awesome-markers.css" rel="stylesheet" />
-  <script src="commute_map_files/leaflet-awesomemarkers-2.0.3/leaflet.awesome-markers.min.js"></script>
-  <link href="commute_map_files/fontawesome-4.7.0/font-awesome.min.css" rel="stylesheet" />
-  <link href="commute_map_files/leaflet-markercluster-1.0.5/MarkerCluster.css" rel="stylesheet" />
-  <link href="commute_map_files/leaflet-markercluster-1.0.5/MarkerCluster.Default.css" rel="stylesheet" />
-  <script src="commute_map_files/leaflet-markercluster-1.0.5/leaflet.markercluster.js"></script>
-  <script src="commute_map_files/leaflet-markercluster-1.0.5/leaflet.markercluster.freezable.js"></script>
-  <script src="commute_map_files/leaflet-markercluster-1.0.5/leaflet.markercluster.layersupport.js"></script>
-head: ''
-background-color: white
-
 layout: post
 title: "On The Way to Work"
 author: "Gerard Kirwin"
