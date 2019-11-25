@@ -66,6 +66,7 @@ I took the six schools and made a stacked bar chart. Looking around for interest
 <br>
 
 Vail and Sahuarita districts, both located around Tucson became more racially diverse. Maricopa and Higley became less diverse with large decreases in AIAN (American Indian and Alaskan Native) students. Higley also experienced a large increase in white students. Cave Creek and Florence stayed roughly the same. There are plenty of discussions and more investigation that can look into the hows and whys but I believe the findings show that outside of the changes in Higley, there doesn't seem to be large scale changes in communities based on race.
+
 *Conclusions and Reflection*
 -------------
 
