@@ -63,7 +63,7 @@ I chose six school districts among the top 12 in population increases. I picked 
 I took the six schools and made a stacked bar chart. Looking around for interesting themes, I saw the Economist theme from ggthemes package and thought that might look good for this project.
 <br>
 
-<img src="https://raw.githubusercontent.com/gerardrobertkirwin/TT-Back-to-School/master/FastGrowingSchools.png" width="120%">
+<img src="https://raw.githubusercontent.com/gerardrobertkirwin/TT-Back-to-School/master/FastGrowingSchools.png" width="900">
 <br>
 
 Vail and Sahuarita districts, both located around Tucson became more racially diverse. Maricopa and Higley became less diverse with large decreases in AIAN (American Indian and Alaskan Native) students. Higley also experienced a large increase in white students. Cave Creek and Florence stayed roughly the same. There are plenty of discussions and more investigation that can look into the hows and whys but I believe the findings show that outside of the changes in Higley, there doesn't seem to be large scale changes in communities based on race.
