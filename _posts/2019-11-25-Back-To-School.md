@@ -37,8 +37,14 @@ Finally, my last step was to turn the data from a wide format with each row belo
 
 *Visualization*
 ----------
-
+I wanted to start with a simple dot plot to see if there were simple visual patterns could be seen between the two school years. I decided to go with a classic geom_jitter and changed the theme so it was simpler to see the dots which were colored by the school district type.
+<br>
+<img src="https://raw.githack.com/gerardrobertkirwin/TT-Back-to-School/blob/master/DistributionAZSDYears2.png">
 
 
 *Conclusions and Reflection*
 -------------
+
+
+
+ou can check out my GitHub repository [here](https://github.com/gerardrobertkirwin/TT-Back-to-School) for the full code.
