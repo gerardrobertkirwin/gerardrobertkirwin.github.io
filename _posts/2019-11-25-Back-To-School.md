@@ -51,7 +51,21 @@ The first thing that I notice in this graph is the shift in the White and Hispan
 <br>
 
 These observations got me thinking about my second visualization. Having grown up in Arizona, it was not uncommon for a large field or patch of desert to turn into a new housing development or shopping center almost overnight. I know there are many school districts that have had massive changes in student populations due to development. I was curious as to how this changed the racial makeup of the school district.
+<br>
 
+My first thought was to create a stacked bar chart. My thinking was that this would be the easiest way to show changes between the two time periods. To show this in a legible way, I needed to narrow down from my 102 school districts included in the above graphic. I decided to look at schools with the largest percent of total population increases, so I calculated these (in R, of course). The biggest change was a district that grew 6,812%! 
+<br>
+
+I chose six school districts among the top 12 in population increases. I picked the districts instead of picking the highest numeric changes (8 out of 12 were Phoenix suburbs) so it was more representative of the state as a whole. Of six districts I chose; two were in Maricopa County, two were in Pinal County and two were in Southern Arizona. The six represented five different types of school districts (two were labelled "town-distant").
+<br>
+
+I took the six schools and made a stacked bar chart. Looking around for interesting themes, I saw the Economist theme from ggthemes package and thought that might look good for this project.
+<br>
+
+<img src="https://raw.githubusercontent.com/gerardrobertkirwin/TT-Back-to-School/master/FastGrowingSchools.png">
+<br>
+
+Vail and Sahuarita districts, both located around Tucson became more racially diverse. Maricopa and Higley became less diverse with large decreases in AIAN (American Indian and Alaskan Native) students. Higley also experienced a large increase in white students. Cave Creek and Florence stayed roughly the same. There are plenty of discussions and more investigation that can look into the hows and whys but I believe the findings show that outside of the changes in Higley, there doesn't seem to be large scale changes in communities based on race.
 *Conclusions and Reflection*
 -------------
 
