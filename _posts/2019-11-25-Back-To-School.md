@@ -41,13 +41,16 @@ Finally, my last step was to turn the data from a wide format with each row belo
 
 *Visualization*
 ----------
-I wanted to start with a simple dot plot to see if there were simple visual patterns could be seen between the two school years. I decided to go with a classic geom_jitter and changed the theme so it was simpler to see the dots which were colored by the school district type.
+I wanted to start with a simple dot plot to see if there were simple visual patterns could be seen between the two school years. I decided to go with a classic geom_jitter and changed the theme so it was simpler to see the dots which were colored by the school district type. I felt like a white background without gridlines would allow us to see the patterns easiest.
 <br>
 
 <img src="https://raw.githubusercontent.com/gerardrobertkirwin/TT-Back-to-School/master/DistributionAZSDYears2.png">
 <br>
 
-The first thing that I notice in this graph is the 
+The first thing that I notice in this graph is the shift in the White and Hispanic groups. In particular the orange and blue dots which reflect "city" and "suburban" school districts. The two orange dots, representing large city schools, located near the top of each group have moved from about 25% to 50% for Hispanic students and from 75% to 50% for white students. Not surprising considering the increase in the Hispanic population and the phenomena of White Flight. Looking at the blue dots, you can see there has been a shift there as well but not as much. Moving from 15% to 25% for Hispanic students and from 80% to 60% for white students.
+<br>
+
+These observations got me thinking about my second visualization. Having grown up in Arizona, it was not uncommon for a large field or patch of desert to turn into a new housing development or shopping center almost overnight. I know there are many school districts that have had massive changes in student populations due to development. I was curious as to how this changed the racial makeup of the school district.
 
 *Conclusions and Reflection*
 -------------
