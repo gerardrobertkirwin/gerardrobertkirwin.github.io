@@ -41,6 +41,7 @@ Finally, my last step was to turn the data from a wide format with each row belo
 
 *Visualization*
 ----------
+
 I wanted to start with a simple dot plot to see if there were simple visual patterns could be seen between the two school years. I decided to go with a classic geom_jitter and changed the theme so it was simpler to see the dots which were colored by the school district type. I felt like a white background without gridlines would allow us to see the patterns easiest.
 <br>
 
@@ -62,7 +63,7 @@ I chose six school districts among the top 12 in population increases. I picked 
 I took the six schools and made a stacked bar chart. Looking around for interesting themes, I saw the Economist theme from ggthemes package and thought that might look good for this project.
 <br>
 
-<img src="https://raw.githubusercontent.com/gerardrobertkirwin/TT-Back-to-School/master/FastGrowingSchools.png" width=120%>
+<img src="https://raw.githubusercontent.com/gerardrobertkirwin/TT-Back-to-School/master/FastGrowingSchools.png" width="120%">
 <br>
 
 Vail and Sahuarita districts, both located around Tucson became more racially diverse. Maricopa and Higley became less diverse with large decreases in AIAN (American Indian and Alaskan Native) students. Higley also experienced a large increase in white students. Cave Creek and Florence stayed roughly the same. There are plenty of discussions and more investigation that can look into the hows and whys but I believe the findings show that outside of the changes in Higley, there doesn't seem to be large scale changes in communities based on race.
@@ -70,6 +71,9 @@ Vail and Sahuarita districts, both located around Tucson became more racially di
 *Conclusions and Reflection*
 -------------
 
+While working on this project, I feel like I reached a new level of comfortability with using R for data analysis. I was able to use not only what I had learned online but what I had done in previous projects. This project took only about 5 hours excluding breaks, which was far quicker than my previous project which included that challenging map.
+<br>
 
+As for conclusions about the data, I feel like I can come up with some answers to the question I posed earlier. Arizona's growth has had an impact on larger schools more than smaller ones as evidenced by the larger population dots in my first visualization. Growth is largely a change between Hispanic and White students particularly in cities, suburbs and metro-adjacent towns. In the fastest growing districts, in most cases, the diversity of the district stays about the same
 
-ou can check out my GitHub repository [here](https://github.com/gerardrobertkirwin/TT-Back-to-School) for the full code.
+You can check out my GitHub repository [here](https://github.com/gerardrobertkirwin/TT-Back-to-School) for the full code.
