@@ -24,6 +24,7 @@ This perspective would become useful not only in the way I expected, in looking 
 
 *Data* 
 ----------
+
 The School Diversity dataset was relatively clean already from the work done by the Washington Post, who originally collected the data, and the Tidy Tuesday team. Looking at the data was when I formulated what question I wanted my data to answer and what I would need to do to it to get there. 
 <br>
 The dataset featured data on all 50 states and Washington DC. It featured data from the 1994-1995 and 2016-2017 school years as comparison. Also, the data included information about whether the district was integrated, meaning how likely is a school to have a similar racial makeup as the district as a whole.
@@ -33,6 +34,7 @@ While looking at the raw data from top to bottom ordered by state, I quickly got
 To make the data ready for this investigation, I filtered the state category for Arizona. Many school districts in Arizona are "elementary" only or "high school" only. In order to get an even comparison for cohorts, I filtered these districts out, leaving only "unified" school districts that serve K-12.
 <br>
 Finally, my last step was to turn the data from a wide format with each row belonging to a school district in a given year to a long format with each row belonging to a racial group at a school district in a given year.
+
 *Visualization*
 ----------
 
