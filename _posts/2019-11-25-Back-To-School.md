@@ -5,7 +5,7 @@ author: "Gerard Kirwin"
 categories: blog
 tags: [sample]
 maps: true
-image: language arts class with help.jpg
+image: language%20arts%20class%20with%20help.jpg
 ---
 
 <p style="font-size: 0.9rem;font-style: italic;">
