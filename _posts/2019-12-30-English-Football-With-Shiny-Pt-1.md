@@ -82,6 +82,6 @@ I decided to go for
 
 
 Here is the finished product:
-<iframe src="https://gerardrobertkirwin.shinyapps.io/EnglishFootballTable/" style="border:none;width:1000px;height:500px;"></iframe>
+<iframe src="https://gerardrobertkirwin.shinyapps.io/EnglishFootballTable/" style="border:none;width:1200px;height:500px;"></iframe>
 
 You can check out my GitHub repository [here](https://github.com/gerardrobertkirwin/Shiny-English-Football-Table) for the full code.
