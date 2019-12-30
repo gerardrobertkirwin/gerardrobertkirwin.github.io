@@ -67,6 +67,8 @@ In the next step, I cleaned up some of the team names. Often, in standings teams
 In addition to the Rs and Ps attached to some team names, some team names in some years are written with abbreviations or shortened names. For example, the team Brighton & Hove Albion is written five different ways including the way shown, which is their official name. Again, I used a string replace to fix all these names which not only unifies all naming conventions for each team but allows aggregate data to be calculated by name correctly. As I am unsure of the origin of this data, I cannot fully explain why some seasons have different abbreviations for Brighton & Hove Albion and the others.
 <br>
 
+Finally, I changed the names of the tiers that I changed above to calculate the "total position" 
+
 *Shiny app*
 ----------
 
@@ -75,3 +77,10 @@ While I'm still working on the product you will see in part 2, I wanted to show 
 <br>
 
 I decided to go for 
+
+
+
+Here is the finished product:
+<iframe src="https://gerardrobertkirwin.shinyapps.io/EnglishFootballTable/" style="border:none;width:1000px;height:500px;></iframe>
+
+You can check out my GitHub repository [here](https://github.com/gerardrobertkirwin/Shiny-English-Football-Table) for the full code.
