@@ -67,11 +67,11 @@ In the next step, I cleaned up some of the team names. Often, in standings teams
 In addition to the Rs and Ps attached to some team names, some team names in some years are written with abbreviations or shortened names. For example, the team Brighton & Hove Albion is written five different ways including the way shown, which is their official name. Again, I used a string replace to fix all these names which not only unifies all naming conventions for each team but allows aggregate data to be calculated by name correctly. As I am unsure of the origin of this data, I cannot fully explain why some seasons have different abbreviations for Brighton & Hove Albion and the others.
 <br>
 
-*Data as Shiny app*
+*Shiny app*
 ----------
 
 I have been wanting to learn Shiny for a while and thought that I could use this newly clean data to try it out.
 While I'm still working on the product you will see in part 2, I wanted to show everyone what I've learned so far. I want to give a big thanks to Coding Club because [their Shiny tutorial](https://ourcodingclub.github.io/2017/03/07/shiny.html) was the best one I saw online and really helped me through this project.
 <br>
 
-
+I decided to go for 
