@@ -39,27 +39,6 @@ The dataset is a listing of the number of games won, lost and tied (listed as D 
 Looking at the data there were several things I needed to do to clean the data. First, I wanted standings with combined wins, losses, ties and goals. The data had separate home and away totals except for the 1992-93 through 2008-09 seasons where the data was combined but split into random columns. I calculated and combined the data, which involved changing the NULL data from 1992-93 through 2008-09 to 0 to enable calculations, then added the home and away columns. Finally, I removed the separate home and away columns. 
 <br>
 
-Next, I wanted to calculate each team's "total position" for each year (this will be used in my next blog). English football operates on a system of [relegation and promotion](https://en.wikipedia.org/wiki/Promotion_and_relegation) between their multiple divisions which are tiered. Usually the bottom 2-4 teams in each division are relegated to a lower division and the bottom 2-4 teams in each division are promoted to the next division. I wanted to calculate where every team is on the system of tiers each year. The top team in the top tier is 1 and the bottom team in the bottom tier is the highest number (for example 92 in 2017-18).
-<br>
-
-To figure out each team's "total position", I needed to have a counting sequence through the tiers, and have it start over every year. In my dataset, the tiers were listed as text such as "First Tier", which is unreadable for a sequencing function. So, I changed each tier to a number, 1 through 4, which the function could sequence through. Then I used R's within function to sequence through the tiers and then through the years. This worked a charm showing me 1 for the top team in the top division in each year and a number in the 80s or 90s (depending on the size of English League football in a particular year) for the worst team in the lowest division.
-<br>
-
-The code used is shown below:
-
-    table_season_tiers <- table_clean %>% 
-      mutate(Tier=str_replace_all(Tier, "First tier", '1')) %>% 
-      mutate(Tier=str_replace_all(Tier, "Second tier", '2')) %>% 
-      mutate(Tier=str_replace_all(Tier, "Third tier", '3')) %>% 
-      mutate(Tier=str_replace_all(Tier, "Fourth tier", '4')) %>% 
-      arrange(Season, Tier, Pos) %>% 
-      within( {
-        'Total Position' <- ave(Season, Season, FUN = seq_along)
-      })  
-
-    table_season_tiers <-  table_season_tiers %>% 
-      mutate(`Total Position` = as.numeric(table_season_tiers$`Total Position`))
-<br>
 
 In the next step, I cleaned up some of the team names. Often, in standings teams that are relegated or promoted are listed with a R or a P, respectively, next to their name. I removed these with a simple string replace. The original data had a column which signified some of these places, but it is incomplete. In a future project, I would like to make that column complete for all relegated or promoted teams.
 <br>
@@ -67,7 +46,7 @@ In the next step, I cleaned up some of the team names. Often, in standings teams
 In addition to the Rs and Ps attached to some team names, some team names in some years are written with abbreviations or shortened names. For example, the team Brighton & Hove Albion is written five different ways including the way shown, which is their official name. Again, I used a string replace to fix all these names which not only unifies all naming conventions for each team but allows aggregate data to be calculated by name correctly. As I am unsure of the origin of this data, I cannot fully explain why some seasons have different abbreviations for Brighton & Hove Albion and the others.
 <br>
 
-Finally, I changed the names of the tiers that I changed above to calculate the "total position" to their correct names. While this may seem straightforward, the names of some divisions had changed three times since 1992 so I used a case_when wrapped in a str_replace_all to give each division in each year the correct name.
+Finally, I changed the names of the tiers from numbers to their correct names. While this may seem straightforward, the names of some divisions had changed three times since 1992 so I used a case_when wrapped in a str_replace_all to give each division in each year the correct name.
 <br>
 
 *Shiny app*
