@@ -49,3 +49,23 @@ The code used is shown below:
       mutate(`Total Position` = as.numeric(table_season_tiers$`Total Position`))
 <br>
 
+
+*Shiny*
+-----------
+
+Here is the finished product (Click [here](https://gerardrobertkirwin.shinyapps.io/EnglishFootball/) to open in a new window):
+<iframe src="https://gerardrobertkirwin.shinyapps.io/EnglishFootball/" style="border:none;width:1150px;height:500px;display:block"></iframe>
+
+You can check out my GitHub repository [here](https://github.com/gerardrobertkirwin/Shiny-English-Football-Table) for the full code.
+
+
+*Next Steps*
+-----------
+
+I really enjoyed this project and I thought it really strengthened my ability to work with Big Data (92 teams times 70 years of data times 15 variables is still pretty large) and my ability to look at data and understand pain points for dealing with it.
+I learned quite a bit about Plotly as I was able to use some of my JavaScript skills learned from my Leaflet project to understand some of the options.
+I'm thinking of doing a third part where I add in another tab where users can interact with some total data, but I decided to leave that out for now.
+<br>
+
+My main focus next is working on [this online course](https://www.futurelearn.com/courses/data-science-environmental-modelling), Data Science for Environmental Modelling and Renewables from the University of Glasgow. 
+With my interest in Data Science, background in earth sciences and current position working with an energy non-profit, it seemed like an obvious fit and I'm excited to work on it.
