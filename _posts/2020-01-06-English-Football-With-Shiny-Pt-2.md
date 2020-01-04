@@ -8,7 +8,7 @@ maps: true
 image: prem_shiny_2.jpg
 ---
 
-<p style="font-size: 0.9rem;font-style: italic;"><img style="display: block;" src="https://live.staticflickr.com/6063/6074270007_1044a309eb_b.jpg" alt="Cowie Celebrates"><a href="https://www.flickr.com/photos/37195744@N03/6074270007">"Cowie Celebrates"</a><span> by <a 
+<p style="font-size: 0.9rem;font-style: italic;"><a href="https://www.flickr.com/photos/37195744@N03/6074270007">"Cowie Celebrates"</a><span> by <a 
 href="https://www.flickr.com/photos/37195744@N03">joncandy</a></span> is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.0/?ref=ccsearch&atype=html" style="margin-right: 5px;">CC BY-SA 2.0</a></p>
 
 On the [last episode](https://www.gerardrobertkirwin.com/blog/2019/12/30/english-football-with-shiny-pt-1)...
