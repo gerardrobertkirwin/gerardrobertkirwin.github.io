@@ -63,7 +63,7 @@ After cleaning up the data, I worked out the plot using ggplot and then using gg
 
 I decided to go with a classic theme for a cleaner look. The y-axis was listed in reverse as I wanted team 1 team to be on top and for the x-axis, I listed the XXX6-XXX7 years each decade as the data set started in 1946-47. Passing all these arguments into ggplotly, I made the settings for the plotly graph to display the team's name, the year, which division they were in, the number of wins, losses and draws and the number of points they earned. 
 <br>
-<a href="https://raw.githubusercontent.com/gerardrobertkirwin/gerardrobertkirwin.github.io/master/assets/img/hoverbox.png" width=600px></a>
+<img src="https://raw.githubusercontent.com/gerardrobertkirwin/gerardrobertkirwin.github.io/master/assets/img/hoverbox.png" width=600px>
 <br>
 
 Other settings I specified were removing some of the plotly buttons and having only a few lines show on render. The lines I chose were taken from a calculation I did to find out which teams got the most wins in the dataset and selecting some of the top ones. I also feel like the lines show some of the interesting journeys teams have been on in the post-war period.
