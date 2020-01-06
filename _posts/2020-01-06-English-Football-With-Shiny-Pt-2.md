@@ -49,16 +49,16 @@ The code used is shown below:
       mutate(`Total Position` = as.numeric(table_season_tiers$`Total Position`))
 <br>
 
-It should be noted that I did these steps when I was doing the cleanup for the data I used in my last blog. So when I renamed the tiers from "First tier" to 1, later I renamed 1 to First Division or Premier League, as I mentioned last time.
+It should be noted that I did these steps when I was doing the cleanup for the data I used in my last blog. So, when I renamed the tiers from "First tier" to 1, later I renamed 1 to First Division or Premier League, as I mentioned last time.
 <br>
 
-*Shiny*
+*Visualization*
 -----------
 
 I have a notebook on my desk where I draw or write out what I want to do with each project. With this project, I wanted to create a graph that showed how teams progressed through the years with the ability to look at information about each year. While doing some research, I found that using plotly would give me an interactive graph with a hover-over ability with limited coding.
 <br>
 
-After cleaning up the data, I worked out the plot using ggplot and then using ggplotly to transform it into a plotly graph. I originally wanted to create something akin to a bump graph but with so many teams, the graph quickly got very cluttered. I was inspired by [this graph](https://archive.nytimes.com/www.nytimes.com/interactive/2013/03/29/sports/baseball/Strikeouts-Are-Still-Soaring.html?ref=baseball) with so many points and lines. So I went with  simple geom_point and geom_line layers. Inspired by that New York Times graph, I decided to go with a gray color scheme with the lines. Another consideration for going gray was that my other option, assigning each team's colors to their line would not only be burdensome but potentially confusing as most teams are blue or red.
+After cleaning up the data, I worked out the plot using ggplot and then using ggplotly to transform it into a plotly graph. I originally wanted to create something akin to a bump graph but with so many teams, the graph quickly got very cluttered. I was inspired by [this graph](https://archive.nytimes.com/www.nytimes.com/interactive/2013/03/29/sports/baseball/Strikeouts-Are-Still-Soaring.html?ref=baseball) with so many points and lines. So I went with simple geom_point and geom_line layers. Inspired by that New York Times graph, I decided to go with a gray color scheme with the lines. Another consideration for going gray was that my other option, assigning each team's colors to their line would not only be burdensome but potentially confusing as most teams are blue or red.
 <br>
 
 I decided to go with a classic theme for a cleaner look. The y-axis was listed in reverse as I wanted team 1 team to be on top and for the x-axis, I listed the XXX6-XXX7 years each decade as the data set started in 1946-47. Passing all these arguments into ggplotly, I made the settings for the plotly graph to display the team's name, the year, which division they were in, the number of wins, losses and draws and the number of points they earned. 
@@ -66,11 +66,22 @@ I decided to go with a classic theme for a cleaner look. The y-axis was listed i
 <img src="https://raw.githubusercontent.com/gerardrobertkirwin/gerardrobertkirwin.github.io/master/assets/img/hoverbox.png">
 <br>
 
-Other settings I specified were removing some of the plotly buttons and having only a few lines show on render. The lines I chose were taken from a calculation I did to find out which teams got the most wins in the dataset and selecting some of the top ones. I also feel like the lines show some of the interesting journeys teams have been on in the post-war period.
+Other settings I specified were removing some of the plotly buttons and having only a few lines show on render. The lines I chose were taken from a calculation I did to find out which teams got the most wins in the dataset and selecting some of the top ones. I also love the functionality of the user being able to select/deselect lines.<br>
+
+*Shiny*
+-----------
+
+Moving the graph over to Shiny, I wanted to include my table from the first project. I looked at some Shiny dashboards but decided to go with a simple tabbed page for the simplicity of the look. 
+<br>
+
+I changed a few pieces of code on the table from Part 1, the biggest change being that I used dataTableOutput in this new version, which allows for filtering by column. I also moved the footnote to helpText.
+<br>
+
+Because of the size of the graph, I went for a 150% width and was pleased to see that it worked and looks good too. <br>
 
 Here is the finished product (Click [here](https://gerardrobertkirwin.shinyapps.io/EnglishFootball/) to open in a new window):
 <iframe src="https://gerardrobertkirwin.shinyapps.io/EnglishFootball/" style="border:none;width:1150px;height:500px;display:block"></iframe>
-
+<br>
 You can check out my GitHub repository [here](https://github.com/gerardrobertkirwin/Shiny-English-Football-Table) for the full code.
 
 
@@ -80,6 +91,9 @@ You can check out my GitHub repository [here](https://github.com/gerardrobertkir
 I really enjoyed this project and I thought it really strengthened my ability to work with large datasets (92 teams times 70 years of data times 15 variables is still pretty large) and my ability to look at data and understand pain points for dealing with it.
 I learned quite a bit about plotly as I was able to use some of my JavaScript skills learned from my Leaflet project to understand some of the options.
 I'm thinking of doing a third part where I add in another tab where users can interact with some total data, but I decided to leave that out for now.
+<br>
+
+While housesitting, I got to read part of a book called "Data Story" by Nancy Durate. A good book with lots of good examples, the book is about using data to tell a story. I thought about that a lot in this project. I feel like with the line graph you can see the stories of the teams throughout time. With the table, you can see the story of each year. If the number of points for teams at the top are close together, you can assume it was a very competitive season. If one team has a lot more points than the others, you would think that they were a great, dominant team. It's this connection to numbers that brought me into sports in the first place and I am excited to have new tools to explore these stories through the numbers. 
 <br>
 
 My main focus next is working on [this online course](https://www.futurelearn.com/courses/data-science-environmental-modelling), Data Science for Environmental Modelling and Renewables from the University of Glasgow. 
