@@ -31,6 +31,23 @@ I then set about gathering the data and merging the Christmas Day and Final tabl
 *Modeling*
 -----------------
 
+My next step was to see what algorithms would give me the best results from the Christmas Day table. I borrowed a method from <a href="https://machinelearningmastery.com/machine-learning-in-python-step-by-step/">this page</a> to test out some algorithms and which worked best. The code produced a box and whisker plot showing the algorithms side by side:
+
+
+
+Since the accuracy was based on predicting the number of points at the end of the season and not the position, the accuracy values are quite low. The points total system (3 points for a win and 1 for a draw or tie) is a calculation, not a value so I wasn’t expecting these algorithms to predict the exact numbers. Remember we are looking to predict the order of the finish, not the points total. So Logistic Regression and LinearDiscriminantAnalysis should give us the best results.
+
+I decided to use all the relevant columns in the Christmas Day table, Wins, Losses, Draws, Goals Fielded, Goals Allowed, Goal Difference and Points. My rationale was that they were all good indicators of points and position, but picking and choosing some would skew the results in one way or another. For example, Team A could win fewer games than Team B but could finish ahead if they had more draws and therefore more points. So for simplicity, I left all these features in.
+
+After testing out Logistic Regression on my test and train data, I was ready to let it loose on the current year’s data. Here were my results:
+
+
+
+Once again, the points values are secondary to the order.
+
+I did the same thing for LinearDiscriminantAnalysis, which had the same accuracy score as the Logistic Regression. However, their results were very different:
+
+
 
 
 *Analysis*
