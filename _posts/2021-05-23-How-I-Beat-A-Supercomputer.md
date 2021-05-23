@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Let's Chat"
+title: "How I Beat A Supercomputer"
 author: "Gerard Kirwin"
 categories: blog
 tags: [sample]
