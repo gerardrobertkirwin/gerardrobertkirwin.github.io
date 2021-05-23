@@ -24,9 +24,13 @@ On a whim one afternoon, I decided to type a little machine learning code to see
 *Data*
 ----------
 
+The data I needed to run was the table at Christmas and the final table. However, teams may have played in different amounts of games by Christmas Day. Teams may have completed less games on the same day due to <a href=”https://en.wikipedia.org/wiki/Glossary_of_association_football_terms#F”>fixture congestion</a>, the placement of Christmas Day in the footballing week and in the case of the last year, the effects of COVID-19. I decided instead of basing it exactly on the Christmas table, that I would pick a set number of matches so the number of goals and points from extra or missing games wouldn’t skew the results. I used 17 games as my baseline because that was the most common number of games completed by Christmas Day.
 
-*Visualization*
+I then set about gathering the data and merging the Christmas Day and Final tables so I had a single data table to train and test. I also gathered the 17 game results from the 2020-2021 season for my final test.
+
+*Modeling*
 -----------------
+
 
 
 *Analysis*
