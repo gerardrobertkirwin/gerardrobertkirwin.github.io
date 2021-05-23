@@ -53,6 +53,17 @@ I did the same thing for LinearDiscriminantAnalysis, which had the same accuracy
 *Analysis*
 ----------------
 
+I ran the other models to see what I would get and you can see those in my Jupyter notebook on my GitHub page.
+
+
+
+With the 2020-2021 season over, the Premier League’s champion was Manchester City who was predicted by my simple algorithm but not by a "supercomputer". Overall, my algorithm was able to predict 10 out of the 20 teams correctly, while the algorithm correctly predicted just 4. The top 3 and bottom 5 places were perfectly predicted by the algorithm, while the "supercomputer" only captured the bottom 3, also known as the relegation places.
+My algorithm didn’t predict the middle of the table as well. There are some easy explanations for this. Firstly, these teams were closer to each other in total points. There is a 17 point gap between 1st and 3rd but 7 points between 6th and 11th. An extra win could have elevated 10th place to 7th.
+
+An algorithm also doesn’t account for teams improving or getting worse. Everton, Aston Villa and Southampton had dramatic drops in form. The "supercomputer" had the three teams finishing 4th, 9th and 7th respectively. My algorithm had them finishing 6th, 7th and 8th. The three teams finished 10th, 11th and 15th.
+
+On the reverse, West Ham, Arsenal and Leeds have had improvements in form. The "supercomputer" had them finishing 10th, 15th and 14th respectively. My algorithm had them finishing 10th, 11th and 12th. These three teams finished 6th, 8th and 9th.
+
 
 *Next Steps*
 --------------------
