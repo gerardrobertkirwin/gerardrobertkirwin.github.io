@@ -3,7 +3,7 @@ layout: misc
 title: About
 ---
 
-![me](/assets/img/gerard1.png)
+![me](/assets/img/final_gerard_1.png)
 Some people are excellent at one thing, like professional athletes. Some people are average— weekend athletes who can keep up with a pick-up basketball game in the park. here are players who are really good shooters, there are players who are really good defenders. There are also the players who do well in multiple parts of their game, but aren’t excellent in just one area—I like to think of myself as one of those kinds of people.\*
  <br><br>
 As a kid, I was really bright and very interested in becoming a TV meteorologist.I followed this dream into college when I realized I was very good at calculus, physics and thermodynamics. I was very good at developing and communicating forecasts, but not *excellent* at it. This—and graduating in the middle of the recession—led me to another path: teaching.
