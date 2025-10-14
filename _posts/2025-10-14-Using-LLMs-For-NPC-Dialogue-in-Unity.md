@@ -88,9 +88,59 @@ A C# script in the game, GeminiServerLauncher, runs when the game starts. It sta
 
 *Prompt Flow*
 ----------
-Line?
+The dialogue in the game is set up in a script which includes the mechanisms for the NPCs to deliver dialogue through a UI dialogue box. Each of the NPCs have a game object that includes their portrait, for the dialogue box, their lines (for hard written NPC lines) and a space for their personality which we can use for the AI call.
 
+The code below is included in the NPC script, including the prompt to Gemini. The method of calling Gemini's API through the proxy server requires the prompt and response to be JSON and translated in the game.
 
+    IEnumerator FetchAIDialogue()
+    {
+        string characterName = dialogueData.npcName;
+        string personalityStyle = dialogueData.personalityStyle;
+    
+        string prompt = $"You are a character named {characterName} who {personalityStyle}. Say something in character to the player. Keep it short (1-2 sentences).";
+    
+        string jsonData = JsonUtility.ToJson(new GeminiPrompt() { message = prompt });
+    
+        using (UnityWebRequest request = new UnityWebRequest("http://localhost:8000/generate", "POST"))
+        {
+            byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonData);
+            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+            
+            yield return request.SendWebRequest();
+    
+            try
+            {
+                if (request.result == UnityWebRequest.Result.Success)
+                {
+                    GeminiResponse geminiResponse = JsonUtility.FromJson<GeminiResponse>(request.downloadHandler.text);
+                    aiGeneratedLine = geminiResponse.response;
+                }
+                else
+                {
+                    Debug.LogError("Gemini Request Failed: " + request.error);
+                    Debug.LogError("Response Text: " + request.downloadHandler.text);
+                    aiGeneratedLine = "Nah fam, man couldn't sort the chat. Try again later innit.";
+                }
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogError("Exception during Gemini parsing: " + ex.Message);
+                aiGeneratedLine = "Bruv the whole system’s moving mad. Try again later.";
+            }
+    
+            isAIResponseReady = true;
+            Debug.Log("AI Line to Display: " + aiGeneratedLine);
+            StartCoroutine(TypeDialogue());
+        }
+    }
+
+The code allows for the LLM integration dialogue to appear the same as the hardcoded dialogue by using the same TypeDialogue script. Any text displaying script would work here as the JSON response has been converted.
+
+<img src="https://raw.githubusercontent.com/gerardrobertkirwin/gerardrobertkirwin.github.io/refs/heads/master/assets/img/kez_no_response.jpg">
+
+This set up has proven to be quite reliable but in the chance that the connection is lost, or the player is not connected to the internet, Kez has been programmed to deliver a line. It helps to not see the default "Dialogue Text" that appeared in earlier builds as well as building upon the roadman character. 
 
 *Conclusions and Next Steps*
 -------------
