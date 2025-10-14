@@ -4,7 +4,7 @@ title: "How I Used a LLM for NPC Dialogue in Unity"
 author: "Gerard Kirwin"
 categories: blog
 tags: [sample]
-image: kez02.jpg
+image: kez03.jpg
 ---
 
 Hello, World!
