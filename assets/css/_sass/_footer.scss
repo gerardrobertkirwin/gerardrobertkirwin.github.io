@@ -1,23 +1,34 @@
+// Dark Mode Footer Styles
+
 .footer {
-  background: white;
-  color: $brand-color;
+  background: #1a1a1a; // dark background
+  color: #e0e0e0;      // light neutral text
   text-align: center;
   min-height: 56px;
   line-height: 45px;
   width: $container-width;
+  border-top: 1px solid #333; // subtle top divider
 }
+
 .footer a {
-  color: $brand-color;
-  padding: 0px 10px 0px;
+  color: #38bdf8; // accent link
+  padding: 0 10px;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
+
+.footer a:hover {
+  color: #a855f7; // purple hover tone
+}
+
 @media (max-width: $container-width) {
   .footer {
-    background: white;
-    color: $brand-color;
+    background: #1a1a1a;
+    color: #e0e0e0;
     text-align: center;
     min-height: 56px;
     line-height: 45px;
     width: 95vw;
+    border-top: 1px solid #333;
   }
 }
