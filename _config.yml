@@ -15,7 +15,7 @@ sass:
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
 title:		           "Gerard Robert Kirwin"
-description:	       "Portland, OR based data analyst/scientist and photographer"
+description:	       "London based data analyst/data scientist/machine learning engineer"
 author:              "Gerard Kirwin"
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
