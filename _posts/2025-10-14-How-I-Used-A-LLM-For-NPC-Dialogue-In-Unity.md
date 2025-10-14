@@ -7,4 +7,4 @@ tags: [sample]
 image: kez01.jpg
 ---
 
-"Hello, World!" 
+Hello, World!
