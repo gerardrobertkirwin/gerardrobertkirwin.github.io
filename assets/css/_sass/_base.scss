@@ -40,6 +40,8 @@ h4, h5, h6 {
 /* Body */
 body {
   font-family: $base-font-family;
+  background-color: #111; // dark background
+  color: #e0e0e0;        // light text
 }
 body img {
     align: middle;
@@ -56,6 +58,7 @@ p {
   margin-right: 0;
   line-height: 1.65;
   font-family: $body-font-family;
+  color: #e0e0e0;
 }
 
 /* Lists */
@@ -64,6 +67,7 @@ ul, ol, dl {
   margin-bottom: 1rem;
   margin-left: 1.5rem;
   font-family: $body-font-family;
+  color: #e0e0e0;
 }
 
 ol li {
@@ -88,8 +92,11 @@ dd {
 */
 
 a {
-  color: $brand-color;
+  color: #38bdf8;         // cyan-ish links
   text-decoration: none;
+  &:hover {
+    color: #a855f7;       // purple hover
+  }
 }
 
 /*
@@ -99,24 +106,25 @@ a {
 blockquote {
   margin: 10px 20px 10px;
   padding: 0px 15px;
-  border-left: 0.25em solid #ccc;
-  color: #999;
+  border-left: 0.25em solid #555;
+  color: #ccc;
   line-height: 1.5;
 }
 
 /**
  * Tables
  */
- table {
-     border-collapse: collapse;
-     margin-bottom: 30px;
-     width: 100%;
- }
+table {
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    width: 100%;
+    color: #e0e0e0;
+}
 
- table, th, td {
-     border: 1px solid black;
- }
- th, td {
-     padding: 15px;
-     text-align: left;
- }
+table, th, td {
+    border: 1px solid #444;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
