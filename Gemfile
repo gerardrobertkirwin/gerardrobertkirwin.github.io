@@ -1,5 +1,5 @@
-source "https://rubygems.org"
-gem "ffi", "= 1.16.3"
+# source "https://rubygems.org"
+# gem "ffi", "= 1.16.3"
 
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
@@ -9,22 +9,47 @@ gem "ffi", "= 1.16.3"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 3.6.2"
+# gem "jekyll", "~> 3.6.2"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "minima", "~> 2.0"
+# gem "minima", "~> 2.0"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins
 
 # If you have any plugins, put them here!
-group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.6"
-end
+# group :jekyll_plugins do
+#  gem "jekyll-feed", "~> 0.6"
+# end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'jekyll-paginate'
-gem 'jekyll-sitemap'
-gem 'jekyll-seo-tag'
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# gem 'jekyll-paginate'
+# gem 'jekyll-sitemap'
+# gem 'jekyll-seo-tag'
+
+source "https://rubygems.org"
+
+# FFI compatibility for Netlify build image
+gem "ffi", "~> 1.16.3"
+
+# Jekyll core (upgrade only as much as necessary for Ruby 3.x)
+gem "jekyll", "~> 4.3.3"
+
+# Default theme
+gem "minima", "~> 2.5"
+
+# Add Webrick explicitly (required for Ruby 3+)
+gem "webrick", "~> 1.8"
+
+# Plugins used by your _config.yml
+group :jekyll_plugins do
+  gem "jekyll-feed", "~> 0.16"
+  gem "jekyll-paginate"
+  gem "jekyll-sitemap"
+  gem "jekyll-seo-tag"
+end
+
+# Windows-specific time zone data
+gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
