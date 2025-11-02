@@ -4,7 +4,12 @@ title: "Prompting and Dual LLM Models in Unity"
 author: "Gerard Kirwin"
 categories: blog
 tags: [sample]
-image: goahead01.jpg
+image: goahead00.jpg
 ---
 
 Testing 1,2,3,4
+
+
+*Running Gemini and Ollama*
+----------
+
