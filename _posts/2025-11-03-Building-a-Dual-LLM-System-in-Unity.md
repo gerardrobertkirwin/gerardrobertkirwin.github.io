@@ -11,7 +11,7 @@ As mentioned in my [previous post](https://gerardrobertkirwin.com/blog/2025/10/1
 
 I had a coworker who said he had taken the same anti-money laundering training every year for the last decade. How much engagement do employees have when they know all the answers to the quiz? How much do they really know about the subject matter and would they learn more if the difficulty of these quizzes changed on ability level? These were the questions going through my head when coming up with the idea for the game that would become *Go Ahead*.
 
-To do this, I would build upon the work I did for my game *Brollyland* where I had one NPC speaking AI generated lines. I wanted to create AI generated scenarios, quizzes and dialogues. I wanted the ability to change between different topics. I wanted someone non-technical, like a HR professional, to be able to write a topic such as "first aid" or "GDPR" and the game would create the scenarios and quizzes needed to assess employees.
+To do this, I would build upon the work I did for my game *Brollyland* where I had one NPC speaking AI generated lines. This time, I wanted to create AI generated scenarios, quizzes and dialogues. One of the goals was to have someone non-technical, like a HR professional, be able to write a topic such as "first aid" or "GDPR" and the game would create the scenarios and quizzes needed to assess employees.
 
 *Welcome to GoAhead*
 ----------
@@ -26,9 +26,13 @@ In my research, I found that LLMs provide better dialogue and personalities for 
 *Running Gemini and Ollama*
 ----------
 
-I reused the GeminiServerLauncher from *Brollyland* but since I had to test out more robust prompting, I would have to call the API dozens, if not hundreds of times. Gemini has a relatively robust free plan but I also did not want to run into an issue where I would have to approach or exceed free usage limits. So I developed a solution where I could use a locally run LLM to test prompts and other game mechanics.
+I reused the GeminiServerLauncher from *Brollyland* to connect Unity to a local API proxy. However this game required more robust prompting, where I would have to call the API hundreds of times to iterate prompting and game mechanics. Gemini has a robust free plan but I also did not want to run into an issue where I would have to approach or exceed free usage limits. So I developed a solution where I could use a locally run LLM to test prompts and other game mechanics.
 
+I changed my code so it could use the [Ollama](https://ollama.com/) model runner, which allows for powerful models to be run directly from my machine. To keep some consistency, I decided to continue using a Google product, in this case the gemma3n models. This allowed me to test the game offline, but there were some issues. The latency was poor and I still have not resolved why this was the case. I ran the model in a terminal window with the same prompts relatively quickly. But in Unity, it took minutes to load a scenario, dialogue and quiz.
 
+Doing some research, there may be a few reasons why this is the case. CPU limitation, model size (my model was over 7 GB), quantization and the lack of persistent context. Due to the time restraints of my project, I did not investigate this further but in the future it would be worth another look. 
+
+Running a model locally, in theory, has many advantages
 
 
 *Auto Launching and Switching Models*
