@@ -16,7 +16,7 @@ To do this, I would build upon the work I did for my game *Brollyland* where I h
 *Welcome to GoAhead*
 ----------
 
-<img src="https://raw.githubusercontent.com/gerardrobertkirwin/gerardrobertkirwin.github.io/6ee433707065a532697f05de8378b6467f581a40/assets/img/goahead_office.jpg" class="center">
+<img src="https://raw.githubusercontent.com/gerardrobertkirwin/gerardrobertkirwin.github.io/ca10c7f3aaa379a5bb34f7712aacd9a52e26ed5b/assets/img/vlcsnap-2025-11-03-19h47m42s714.png">
 
 In building the game, I wanted to create a world and characters that are relatable. Explicitly in the scenario prompting, GoAhead is described as "a large, modern yet ordinary workplace". I retained the 2D format and similar art from *Brollyland* for practical reasons, it saved time and allowed me to focus on the AI part of the project. I also kept it similar because I felt like the format would be more relatable to a larger audience. It is visually similar to casual games such as *Animal Crossing* and *Stardew Valley*.
 
@@ -77,4 +77,10 @@ The script above provides a check to see if Ollama is the chosen option (it is t
 *Conclusion and Next Steps*
 ----------
 
-While the game is complete with functioning scenario, dialogue and quiz generation as well as game features such as points, badges and game advancement; it is still a prototype. 
+While the game is complete with functioning scenario, dialogue and quiz generation as well as game features such as points, badges and game advancement; it is still a prototype. While there are other workplace training games out there, and other games that use LLMs to power dialogue and plot, *GoAhead* is the only one I've seen so far to bring the two together.
+
+Items that would be next steps in development would include:
+* Difficulty adjustment is rudimentary at this point, simply based on a number of points determined by correct, semi-correct or incorrect answers. A more robust difficulty system, in real time and based on more data points would be the first place to start.
+* Improving prompting to try and create more dynamic dialogue, scenarios and quizzes. The nature of the LLMs used and those on the market provide limitations and opportunities in this case. But the current game relies too much on a combination of my suggestions in prompts and it's training data. The game should move beyond one-shot prompting.
+* As mentioned above, improvements to the models and the ability to use methods such as RAG to create hyper-specific and vetted materials for the game.
+* More interactivity in the game. Currently the game involves moving through dialogue and answering multiple choice questions. Making the player type out an answer or move through different rooms would enhance the experience.
