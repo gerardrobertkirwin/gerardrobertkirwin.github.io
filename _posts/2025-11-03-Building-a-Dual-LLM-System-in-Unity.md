@@ -32,13 +32,47 @@ I changed my code so it could use the [Ollama](https://ollama.com/) model runner
 
 Doing some research, there may be a few reasons why this is the case. CPU limitation, model size (my model was over 7 GB), quantization and the lack of persistent context. Due to the time restraints of my project, I did not investigate this further but in the future it would be worth another look. 
 
-Running a model locally, in theory, has many advantages
+Running a model locally has many uses where running *GoAhead* locally could be very useful. A company or an organisation can do some context aware fine-tuning, that is they could create their own local LLM. This model could include relevant procedures and policies at inference time. Along with retrieval-augmented generation (RAG), this local model could act as a secure conduit between current documentation and training scenarios and dialogue serving as a more engaging experience for employees.
 
 
 *Auto Launching and Switching Models*
 ----------
 
+In later builds of the game, I decided that instead of replacing the Ollama set up entirely with a call to the Gemini server, I wanted to provide the ability to switch between the local LLM and the online version.
 
+<img src="https://raw.githubusercontent.com/gerardrobertkirwin/gerardrobertkirwin.github.io/96d1403af4fc3195ea9cd9b3f9aec59b587fafb9/assets/img/vlcsnap-2025-11-03-15h55m19s208.png">
+
+I did this by creating a dropdown menu in the options menu, where the player (or a user setting up the game) could select between Ollama and Gemini. In practice, players would need to have Ollama installed on their device, so for gameplay testing I allowed Gemini to be used.
+
+    public IEnumerator Generate(string prompt, System.Action<string> callback)
+    {
+      if (backend == Backend.Ollama)
+      {
+        bool done = false;
+        string result = null;
+
+        yield return StartCoroutine(
+            LocalModelManager.Instance.GenerateFromOllama(
+                prompt,
+                r => { result = r; done = true; },
+                () => { done = true; }
+            )
+        );
+        yield return new WaitUntil(() => done);
+
+        if (!string.IsNullOrEmpty(result))
+        {
+            callback(result);
+            yield break;
+        }
+
+        Debug.LogWarning("[UnifiedModelManager] Ollama failed, falling back to Gemini");
+    }
+
+    yield return GenerateFromGemini(prompt, callback);
+    }
+
+The script above provides a check to see if Ollama is the chosen option (it is the default model in the game) and tries it first. It falls back to Gemini if Ollama is unavailable for any reason. Again, the logic is kept within Unity with no separate launcher or manual switching needed. This set up also lends itself to future work such as multi-model fallback, load balancing and local enterprise models as described above.
 
 *Conclusion and Next Steps*
 ----------
