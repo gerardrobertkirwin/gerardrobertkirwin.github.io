@@ -7,4 +7,6 @@ tags: [sample]
 image: seattlebaseball.jpeg
 ---
 
+*Photo is my own.*
+
 Forthcoming!
