@@ -11,7 +11,7 @@ image: seattlebaseball.jpeg
 
 After a year, I have finished my Master's degree in AI for Games Development. Not one to rest on my laurels (and unable to rest on my bank account), I decided to build a project that would highlight my skills in the area of data engineering and data science. I wanted to create a platform, not just a pipeline.
 
-I’ve done projects that highlight these at university and at my previous jobs, but those aren’t the kind of examples I would or could show off in my online portfolio. Also, I love to create my own projects that aren’t the same data science tutorials that endless numbers follow on YouTube. I like to dig deep and find questions, not just plug and play.
+I’ve done projects that highlight these at university and at my previous jobs, but those aren’t the kind of examples I would or could show off in my online portfolio. Also, I love to create my own projects that aren’t the same data science tutorials that endless Data Scientists follow on YouTube. I like to dig deep and find questions, not just plug and play.
 
 Beyond that, I wanted to learn a bit more about gambling. Despite being a huge sports fan my entire life, I’m still a bit flummoxed about certain betting terms and wanted to learn more. I chose baseball because it’s not commonly used for betting data science projects and it’s also one of my favourite sports. Plus it provides a lot of interesting statistics to play with.
 
@@ -28,7 +28,7 @@ After pulling in the baseball and odds data, some cleanup was needed. The MLB da
 The biggest issue with the data was what I like to call “the doubleheader trap”. For those unfamiliar, occasionally baseball teams will play the same opponent twice in one day. Often it is to make up for a previous game cancelled due to weather. Usually the first game will be in the afternoon and the second will be in the evening. Initial joins on the data were done on date, which saw the loss of up to a dozen games on our test season. Changing the join to be on date, team and score proved to fix the issue. The New York Mets could have scored 1 run in each game on July 4th, but it was highly unlikely the Atlanta Braves would score 3 in both games as well.
 
 
-*Modelling*
+*Statistical Modelling*
 -----------
 
 With the connection made, the time was to look at what stats I would use to assist my model. Runs (points scored) and wins are simple but should be useful enough for our purpose of determining the likelihood of a winner. These can be fed into the “Pythagorean Theorem of Baseball”, devised by Bill James, the father of modern baseball statistics. A team’s Pythagorean Expectation is a measure of how a team should do over a series of games, based on the runs they score and runs they allow. Teams that win more games than this amount are considered ‘lucky’ while teams that score less are considered ‘unlucky’.
@@ -51,11 +51,30 @@ In data terms, we also need to be careful not to include today’s game into the
 
 Without this simple code, the model would be able to predict today’s score using…today’s score. Not very useful for a predictive model.
 
+*Model and Production*
+-----------
+
 A Bayesian Linear Model (using PyMC) was chosen because it's more robust than a standard logistic regression model. It accounts for random effects of baseball (of which there are many) and produces a range of probabilities. It creates a "Margin of Safety" where the bets are placed only when the model's confidence is significantly higher than the market odds. For this project, it is set to 5% above market odds but it is a variable that can be changed if the bettor so chooses.
 
 If you check ESPN.com for example, they will tell you the percentage chance that a team will win the game during the game. I don’t enjoy this very much as a fan, it reminds me too much of Hillary Clinton’s election night in 2016. A statistical moment that ended up being misinterpreted and incorrect. However, I can see its use in betting markets and as a longer term metric. 
 
-*Moving to Production*
+I started all my research in notebooks but in order to get that real data team experience that I crave and have missed, I needed this thing to work in production. I refactored the logic into four .py files:
+* Ingestion: data_loading.py
+* Logic: features.py
+* Inference: modeling.py
+* Orchestration: main.py 
+
+For testing, I also used unit testing (via pytest) to verify the rolling window logic and ensure there would be no data leakage. I needed to double check we aren’t using “today’s data” in our stats.
+
+*Conclusion and Next Steps*
 -----------
 
+The model ended up producing around 1.39-1.5 % return on investment (ROI) over ~1000 games. It's a modest return but it does demonstrate one that could work in an investment or financial environment. 
 
+You can view my repository [here](https://github.com/gerardrobertkirwin/mlb-betting-prediction-pipeline).
+
+The pipeline, from API call to model to ROI calculation, is now a robust, reproducible artefact that executes with a single command. The training now saves the .nc file, meaning that the model state can be loaded instantly on disk and used without re-processing data. This elevates this from a pipeline project to a product, which achieves my goal of creating something more than a YouTube tutorial.
+
+Moving forward, this model is too simple and too conservative. Relying on runs scored only is not the way to gain an advantage on betting, especially in today's world of advanced stats. I would love to strengthen our model by focusing more on player-centred stats such as on base percentage (OBP) and using them not only to determine outcomes but in models predicting prop bets.
+
+Another area of improvement would be moving the model to the cloud. I've worked in cloud architecture before, using Azure, and know that the advantage would be a quicker and more efficient model from data to results. Another area from my experience I could implement would be automation. At my previous job, we ran batch imports of the bank's data every morning at 6 AM. In a theoretical world where we ran this model daily, we could pick up last night's results in the morning and load the betting results before the evening games.
