@@ -19,5 +19,9 @@ Beyond that, I wanted to learn a bit more about gambling. Despite being a huge s
 *Data Engineering*
 ------------------
 
+For this project, we needed data and my preference, as a data engineering project, was to find APIs to pull in data. Baseball has always been a sport strong in statistics, numbers and data. Major League Baseball knows this and has a robust statistical API that is easily accessible. Pulling game data from there was a relatively easy task, but I took care not to hit rate limits. I also performed hydration on the call, in order to get stats and scores together.
+
+For the odds data, I struggled to find a free API for the data and did not wish to worry about what fees I could be paying for pulls, especially for a straight forward, one-time project. So I decided to pull from the (https://github.com/ArnavSaraogi/mlb-odds-scraper)[MLB Odds Scraper]. 
+
 
 
