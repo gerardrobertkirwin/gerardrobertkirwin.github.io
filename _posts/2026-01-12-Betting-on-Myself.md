@@ -9,4 +9,15 @@ image: seattlebaseball.jpeg
 
 *Photo is my own.*
 
-Forthcoming!
+After a year, I have finished my Master's degree in AI for Games Development. Not one to rest on my laurels (and unable to rest on my bank account), I decided to build a project that would highlight my skills in the area of data engineering and data science. I wanted to create a platform, not just a pipeline.
+
+I’ve done projects that highlight these at university and at my previous jobs, but those aren’t the kind of examples I would or could show off in my online portfolio. Also, I love to create my own projects that aren’t the same data science tutorials that endless numbers follow on YouTube. I like to dig deep and find questions, not just plug and play.
+
+Beyond that, I wanted to learn a bit more about gambling. Despite being a huge sports fan my entire life, I’m still a bit flummoxed about certain betting terms and wanted to learn more. I chose baseball because it’s not commonly used for betting data science projects and it’s also one of my favourite sports. Plus it provides a lot of interesting statistics to play with.
+
+
+*Data Engineering*
+------------------
+
+
+
