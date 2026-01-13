@@ -17,7 +17,7 @@ Beyond that, I wanted to learn a bit more about gambling. Despite being a huge s
 
 
 *Data Engineering*
-—---------------------
+-----------
 
 For this project, we needed data and my preference, as a data engineering project, was to find APIs to pull in data. Baseball has always been a sport strong in statistics, numbers and data. Major League Baseball knows this and has a robust statistical API that is easily accessible. Pulling game data from there was a relatively easy task, but I took care not to hit rate limits. I also performed hydration on the call, in order to get stats and scores together.
 
@@ -56,6 +56,6 @@ A Bayesian Linear Model (using PyMC) was chosen because it's more robust than a 
 If you check ESPN.com for example, they will tell you the percentage chance that a team will win the game during the game. I don’t enjoy this very much as a fan, it reminds me too much of Hillary Clinton’s election night in 2016. A statistical moment that ended up being misinterpreted and incorrect. However, I can see its use in betting markets and as a longer term metric. 
 
 *Moving to Production*
-—--------------------------
+-----------
 
 
