@@ -69,7 +69,7 @@ For testing, I also used unit testing (via pytest) to verify the rolling window 
 *Conclusion and Next Steps*
 -----------
 
-The model ended up producing around 1.39-1.5 % return on investment (ROI) over ~1000 games. It's a modest return but it does demonstrate one that could work in an investment or financial environment. 
+The model ended up producing around 1.39-1.5 % return on investment (ROI) over ~1000 games. It's a modest return but it does demonstrate a process that could work in an investment or financial environment. 
 
 You can view my repository [here](https://github.com/gerardrobertkirwin/mlb-betting-prediction-pipeline).
 
@@ -77,4 +77,4 @@ The pipeline, from API call to model to ROI calculation, is now a robust, reprod
 
 Moving forward, this model is too simple and too conservative. Relying on runs scored only is not the way to gain an advantage on betting, especially in today's world of advanced stats. I would love to strengthen our model by focusing more on player-centred stats such as on base percentage (OBP) and using them not only to determine outcomes but in models predicting prop bets.
 
-Another area of improvement would be moving the model to the cloud. I've worked in cloud architecture before, using Azure, and know that the advantage would be a quicker and more efficient model from data to results. Another area from my experience I could implement would be automation. At my previous job, we ran batch imports of the bank's data every morning at 6 AM. In a theoretical world where we ran this model daily, we could pick up last night's results in the morning and load the betting results before the evening games.
+Another area of improvement would be moving the model to the cloud. I've worked in cloud architecture before, using Azure, and know that the advantage would be a quicker and more efficient model from data to results. Another area from my experience I could implement would be automation. At my previous job, we ran batch imports of the bank's data every morning at 6 AM. In a production environment, where we ran this model daily, we could pick up last night's results in the morning and load the betting results before the evening games.
